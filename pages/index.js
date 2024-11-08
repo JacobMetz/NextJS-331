@@ -18,7 +18,8 @@ export default function Home() {
   const fetchProducts = async () => {
     setLoading(true);
     try {
-      const response = await fetch('https://fakestoreapi.com/products');
+      // Limit to 20 products 
+      const response = await fetch('https://fakestoreapi.com/products?limit=20');
       if (!response.ok) throw new Error('Failed to fetch products');
       const data = await response.json();
       setProducts(data);
@@ -52,6 +53,21 @@ export default function Home() {
       
       <Counter />
       
+      <p>
+        <a 
+          href="https://github.com/JacobMetz/NextJS-331" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          NextJS-331 Repository
+        </a>
+        <br />
+        I am interested in learning HTMX because I took a class from Carson Gross 
+        and I have heard ThePrimeagen talk about it online.
+      </p>
+
+
+
       <SearchBar onSearch={handleSearch} />
 
       {loading && <p>Loading products...</p>}
@@ -72,18 +88,6 @@ export default function Home() {
         ))}
       </div>
 
-      <p>
-        <a 
-          href="https://github.com/JacobMetz/NextJS-331" 
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          NextJS-331 Repository
-        </a>
-        <br />
-        I am interested in learning HTMX because I took a class from Carson Gross 
-        and I have heard ThePrimeagen talk about it online.
-      </p>
     </div>
   );
 }
