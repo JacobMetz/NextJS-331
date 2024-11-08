@@ -82,7 +82,7 @@ export default function Home() {
         </a>
         <br />
         I am interested in learning HTMX because I took a class from Carson Gross 
-        and I have heard ThePrimeAgen talk about it online.
+        and I have heard ThePrimeagen talk about it online.
       </p>
     </div>
   );
