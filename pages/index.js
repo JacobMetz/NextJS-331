@@ -15,8 +15,12 @@ export default function Home() {
         </h1>
         <Counter />
 
-        <p>*Github Link* I am interested in learning HTMX because
-          I took a class from Carson Gross and I have heard ThePrimeAgen talk about it online. 
+        <p>
+          <a href="https://github.com/JacobMetz/NextJS-331" target="_blank" rel="noopener noreferrer">
+          NextJS-331 Repository
+          </a>
+          <br />
+          I am interested in learning HTMX because I took a class from Carson Gross and I have heard ThePrimeAgen talk about it online.
         </p>
 
     </div>
